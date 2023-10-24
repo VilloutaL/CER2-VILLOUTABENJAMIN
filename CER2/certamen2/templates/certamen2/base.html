@@ -1,23 +1,47 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>INF JMC | {{ title }}</title>
-    <link rel="stylesheet" href="{% static 'certamen2/css/bootstrap.css' %}" />
-    <link rel="stylesheet" href="{% static 'certamen2/css/estilos.css' %}" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
-  </head>
-  <body>
-    <div class="container-fluid">
-      <div class="row vh-100">
-        <section class="col">
-          {% block content %}
 
-          {% endblock %}
-        </section>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ title }}</title>
+  <link rel="stylesheet" href="{% static 'certamen2/css/bootstrap.css' %}" />
+  <link rel="stylesheet" href="{% static 'certamen2/css/estilos.css' %}" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+</head>
+<nav class="navbar bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img id="logoUSM" src="{% static 'certamen2/img/logoUSM.png' %}" class="rounded float-start" alt="logoUSM">
+      <h1 id="title">Sistema Integrado de Notificaciones</h1>
+    </a>
+  </div>
+</nav>
+<div>
+</div>
+<body>
+  <nav class="navbar  bg-body-tertiary">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="admin">Administracion</a>
+          </li>
+        </ul>
       </div>
     </div>
-  </body>
+  </nav>
+
+  {% block content %}
+  {% endblock %}
+  </section>
+  </div>
+  </div>
+  <script src static="{% static 'certamen2/js/bootstrap.js' %}"></script>
+</body>
+
 </html>

@@ -1,8 +1,44 @@
 {% extends 'certamen2/base.html' %}
 
 {% block content %}
+<div>
+  <form method="post" action="{% url 'index' %}" >
+    {% csrf_token %}
+    <select id="select_entidad" name="select_entidad" class="form-select" aria-label="Default select example">
+      <option value="1">Depto Informatica</option>
+      <option value="2">Depto Mecanica</option>
+      <option value="3">Depto Matematica</option>
+    </select>
+    <input type="submit" value="Seleccionar" >
+  </form>
+</div>
+<div class="card_container">
+  {% for card in comunicados %}
+  {% include 'certamen2/card.html' %}
+  {% endfor %}
+</div>
+<div id="carrusel"  class="carousel slide">
 
-<h1>Home</h1>
+  <div class="carousel-inner">
+  {% for card in comunicados %}
+  <div class="carousel-item{% if forloop.first %} active{% endif %}">
+    <h5>{{card.titulo }}</h5>
+    <p>{{card.detalle}}</p>
+  </div>
+  {% endfor %}
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+
+</div>
+
+
 
 {% endblock %}
 

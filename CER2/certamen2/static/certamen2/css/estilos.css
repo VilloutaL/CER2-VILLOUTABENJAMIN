@@ -1,0 +1,106 @@
+
+#navbar{
+    text-align: center;
+}
+
+#select_entidad{
+    width: auto
+}
+
+#title{
+
+    height: 10vw;
+    width: 100vw;
+    padding-top: 3%;
+    padding-left: 20%;
+    text-align: justify;
+
+}
+.card{
+    margin-top:5vw;
+    width: auto;
+    height: auto;
+    text-align:left;
+}
+@media (max-width: 767px) {
+    #logoUSM{
+        align-content :"center";
+        width: 50%;
+        height: 50%;
+    }
+
+    #title{
+        display: none;
+    }
+    .cart-text-sm{
+        display: block;
+    }
+    .cart-text-lg{
+        display: none;
+    }
+    .card_container{
+        display: grid;
+        grid-template-columns: repeat(
+            auto-fit,
+            minmax(
+                60vw,
+                1fr
+            )
+        );
+        gap: 15px;
+}
+    #carrusel {
+        display: none; 
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    #logoUSM{
+        width: 15%;
+        height: 15%;
+    }
+    #title{
+        visibility: visible;
+    }
+    .cart-text-sm{
+        display: none;
+    }
+    .cart-text-lg{
+        display: block;
+    }
+    .card_container{
+        display: grid;
+        grid-template-columns: repeat(
+            auto-fit,
+            minmax(
+                25vw,
+                1fr
+            )
+        );
+        gap: 15px;
+}
+    #carrusel {
+        display: none; 
+    }
+}
+
+@media (min-width: 1200px) {
+    #logoUSM{
+        width: 15%;
+        height: 15%;
+    }
+    #title{
+        visibility: visible;
+    }
+    .card_container {
+        display: none;
+    }
+    #cart-text-sm{
+        visibility: hidden;
+    }
+    #carrusel {
+        display:flex;
+    }
+}
+

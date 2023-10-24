@@ -23,11 +23,13 @@
       {% for card in comunicados %}
       {%if forloop.first %}
       <div class="carousel-item active">
+        <img src="media/{{card.entidad.logo}}" alt="logoentidad" height="100px" width="100px">
         <h5>{{card.titulo }}</h5>
         <p>{{card.detalle}}</p>
       </div>
       {% else %}
       <div class="carousel-item">
+        <img src="media/{{card.entidad.logo}}" alt="logoentidad" height="100px" width="100px">
         <h5>{{card.titulo }}</h5>
         <p>{{card.detalle}}</p>
       </div>

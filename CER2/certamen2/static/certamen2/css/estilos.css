@@ -7,6 +7,20 @@
     width: auto
 }
 
+
+footer{
+    background-color: #2b2b2b;
+    color: antiquewhite;
+    height: 100px;
+    width: 100vw;
+}
+#desarrollo{
+    margin-top: 10px;
+    text-align: center;
+    padding-top: 30px;
+}
+
+
 #title{
 
     height: 10vw;
@@ -24,7 +38,7 @@
 }
 @media (max-width: 767px) {
     #logoUSM{
-        align-content :"center";
+        margin-left: 30%;
         width: 50%;
         height: 50%;
     }
@@ -49,8 +63,10 @@
         );
         gap: 15px;
 }
-    #carrusel {
-        display: none; 
+
+    #carrusel_container{
+        display: none;
+
     }
 
 }
@@ -80,7 +96,7 @@
         );
         gap: 15px;
 }
-    #carrusel {
+    #carrusel_container {
         display: none; 
     }
 }
@@ -99,8 +115,14 @@
     #cart-text-sm{
         visibility: hidden;
     }
-    #carrusel {
-        display:flex;
+    
+    #carrusel_container{
+        display: block; 
+        width: 100vw;
+        height: 400px;
+        margin-top: 50px;
+        text-align: center;
+
     }
 }
 
